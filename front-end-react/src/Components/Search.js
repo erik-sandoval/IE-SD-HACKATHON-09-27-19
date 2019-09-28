@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 
 export default function Search() {
-    render() {
+
+const [title] = useState("")
+
         return (
             <form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
                 <input
@@ -10,7 +12,7 @@ export default function Search() {
                 style={{ flex: '10', padding: '10px' }}
                 placeholder="Add Todo ..."
                 onChange={this.onChange}
-                value={this.state.title}
+                value={title}
             />
                 <input
                     type="submit"
@@ -21,4 +23,4 @@ export default function Search() {
             </form>
         )
     }
-}
+
