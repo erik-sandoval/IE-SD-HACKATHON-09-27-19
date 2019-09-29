@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios"
 
-const Profile = () => {
+const Profile = (props) => {
     const [data, setData] = useState([])
     const [followers, setFollowers] = useState([])
     
 
     useEffect(() => {
-        axios.get('https://api.github.com/users/erik-sandoval').then(res => {
+        axios.get(`https://api.github.com/users/${props.location.input}`).then(res => {
             setData(res.data)
             axios.get(`${res.data.followers_url}`).then(res => {
                 setFollowers(res.data)
@@ -18,6 +18,7 @@ const Profile = () => {
 
     console.log(data)
     console.log(followers)
+    console.log(props)
 
     return <div>
         <div className="container">

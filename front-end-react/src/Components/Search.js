@@ -1,18 +1,6 @@
 import React,{useEffect, useState} from 'react'
 
-export default function Search() {
-
-const [input, setInput] = useState("")
-
-const handleChange = (e) => {
-    setInput(e.target.value)
-}
-
-const onSubmit = (e) => {
-    e.preventDefault();
-    console.log(input)
-}
-
+export default function Search(props) {
         return (
             <form className="searchform">
                 <input
@@ -20,11 +8,10 @@ const onSubmit = (e) => {
                 type="text"
                 name="input"
                 placeholder="Enter GitHub User Name ..."
-                onChange={(e) => handleChange(e)}
-                value={input}
+                onChange={props.handleChange}
             />
                 <input
-                    onClick={(e) => onSubmit(e)}
+                    onClick={(e) => props.onSubmit(e)}
                     type="submit"
                     value="Submit"
                     className="btn"
