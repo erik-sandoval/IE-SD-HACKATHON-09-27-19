@@ -2,15 +2,15 @@ import React,{useEffect, useState} from 'react'
 
 export default function Search() {
 
-const [title, setTitle] = useState("")
+const [input, setInput] = useState("")
 
 const handleChange = (e) => {
-    setTitle(e.target.value)
+    setInput(e.target.value)
 }
 
 const onSubmit = (e) => {
     e.preventDefault();
-    console.log(title)
+    console.log(input)
 }
 
         return (
@@ -18,10 +18,10 @@ const onSubmit = (e) => {
                 <input
                 className="searchbar"
                 type="text"
-                name="title"
+                name="input"
                 placeholder="Enter GitHub User Name ..."
                 onChange={(e) => handleChange(e)}
-                value={title}
+                value={input}
             />
                 <input
                     onClick={(e) => onSubmit(e)}
