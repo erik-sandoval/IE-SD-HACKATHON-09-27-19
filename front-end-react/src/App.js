@@ -9,7 +9,7 @@ import Error from './Pages/Error';
 function App() {
   return (
     <div className='App'>
-      <header className='app-header'>IESD Hackday - GitHub API</header>
+      {/* <header className='app-header'>IESD Hackday - GitHub API</header> */}
       <Router>
         <Route path="/profile" component={Profile}/>
         <Route path="/error" component={Error} />
