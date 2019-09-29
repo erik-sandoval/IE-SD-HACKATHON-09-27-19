@@ -32,12 +32,9 @@ console.log(username)
       <header className='app-header'>IESD Hackday - GitHub API</header>
       
         <Route path="/profile" render={(props) => <Profile {...props} username={username}/>}/>
-        <Route path="/error" component={Error} />
         <Route exact path="/" render={(props) => <Search {...props} onSubmit={onSubmit} handleChange={handleChange}/>}/>
-        <Route path="/" exact component={Search}/>
-        <Route path="/search" component={Search}/>
         <Route path="/profile" component={Profile}/>
-        <Route component={Error} />
+        <Route path="/error" component={Error} />
     </div>
   );
 }
