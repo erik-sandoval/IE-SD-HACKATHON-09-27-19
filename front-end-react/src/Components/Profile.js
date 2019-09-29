@@ -37,6 +37,10 @@ const Profile = () => {
                     <img src={follower.avatar_url}></img>
                 </div>
             ))}</div>}
+
+            {repos && <div>{repos.map((repo, i) => (
+                <div><a href={repo.html_url} target="_blank">{repo.full_name}</a></div>
+            ))}</div>}
         </div>
     </div>
 }
