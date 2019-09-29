@@ -1,7 +1,7 @@
-import React from "../node_modules/react";
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import GithubApi from "./Components/GithubApi";
+import Profile from "./Components/Profile";
 
 
 
@@ -10,7 +10,7 @@ function App() {
     <div className='App'>
       <header className='App-header'></header>
       <Router>
-        <Route path="/github-api" component={GithubApi}/>
+        <Route path="/profile" component={Profile}/>
       </Router>
     </div>
   );
