@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Route path="/profile" component={Profile}/>
         <Route path="/error" component={Error} />
-        <Route path="/search" component={Search}/>
+        <Route exact path="/" component={Search}/>
       </Router>
     </div>
   );
