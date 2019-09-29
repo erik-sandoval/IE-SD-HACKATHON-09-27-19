@@ -1,3 +1,8 @@
+:root {
+  --btnPrimaryColor: #536DFE;
+  --mainTransition: all 0.3s linear;
+}
+
 .app-header {
   font-size: 62px;
   margin: 40px 0 75px 0;
@@ -26,11 +31,43 @@
   margin-right: 30px;
   padding: 20px;
   font-size: 48px;
-  background: #000;
+  border: 3px solid var(--btnPrimaryColor);
+  background: var(--btnPrimaryColor);
+  transition: var(--mainTransition);
   color: #fff;
   text-align: center;
 }
 
 .btn:hover {
-  background: red;
+  background: transparent;
+  color: var(--btnPrimaryColor);
+  cursor: pointer;
+}
+
+.btn-error {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #fff;
+  background: var(--btnPrimaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--btnPrimaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-error:hover {
+  background: transparent;
+  color: var(--btnPrimaryColor);
+  cursor: pointer;
+}
+
+.error {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.error img {
+  width: 50%;
 }

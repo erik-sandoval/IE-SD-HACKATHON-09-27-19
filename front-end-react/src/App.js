@@ -10,11 +10,14 @@ function App() {
   return (
     <div className='App'>
       <header className='app-header'>IESD Hackday - GitHub API</header>
-      <Router>
-        <Route path="/profile" component={Profile}/>
-        <Route path="/error" component={Error} />
+      <Switch>
+        <Route path="/" exact component={Search}/>
         <Route path="/search" component={Search}/>
-      </Router>
+        <Route path="/profile" component={Profile}/>
+        
+        
+        <Route component={Error} />
+      </Switch>
     </div>
   );
 }
