@@ -1,10 +1,17 @@
-import React from "../node_modules/react";
+import React from "react";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import Search from "./Components/Search"
 import "./App.css";
 
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'></header>
+      <header className='app-header'>IESD Hackday - GitHub API</header>
+      <Router>
+        <Route path="/search" component={Search}/>
+      </Router>
     </div>
   );
 }

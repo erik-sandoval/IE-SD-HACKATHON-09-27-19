@@ -5,20 +5,18 @@ export default function Search() {
 const [title] = useState("")
 
         return (
-            <form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
+            <form className="searchform">
                 <input
+                className="searchbar"
                 type="text"
                 name="title"
-                style={{ flex: '10', padding: '10px' }}
-                placeholder="Add Todo ..."
-                onChange={this.onChange}
+                placeholder="Enter GitHub User Name ..."
                 value={title}
             />
                 <input
                     type="submit"
                     value="Submit"
                     className="btn"
-                    style={{flex: 1}}
                 />
             </form>
         )
