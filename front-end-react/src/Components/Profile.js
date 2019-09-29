@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios"
+import image from '../Capture.PNG'
+
 
 const Profile = (props) => {
     const [data, setData] = useState([])
@@ -38,6 +40,7 @@ const Profile = (props) => {
                 
                 <div>{i > 6 ? <div><a href={repo.html_url} target="_blank">{repo.full_name}</a></div> : null}</div>
             ))}</div>}
+            <img src={image}></img>
         </div>
     </div>
 }
